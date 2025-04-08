@@ -1,4 +1,4 @@
-package com.e_handel.webclient;
+/**package com.e_handel.webclient;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -30,4 +30,4 @@ public class UserClient {
 
                 });
     }
-}
+}**/
