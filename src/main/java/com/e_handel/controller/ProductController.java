@@ -2,7 +2,7 @@ package com.e_handel.controller;
 
 import com.e_handel.entity.Product;
 import com.e_handel.services.ProductService;
-//import com.e_handel.webclient.UserClient;
+import com.e_handel.webclient.UserClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -19,7 +19,7 @@ import java.util.List;
 public class ProductController {
 
     private final ProductService productService;
-    //private final UserClient userClient;
+    private final UserClient userClient;
 
 
 
@@ -49,8 +49,8 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
-   // @GetMapping("/users-from-service")
-    //public String getUsersFromUserService() {
-      //  return userClient.getAllUsersFromUserService().block();
-    //}
+    @GetMapping("/users-from-service")
+    public String getUsersFromUserService() {
+        return userClient.getAllUsersFromUserService().block();
+    }
 }
